@@ -1,8 +1,7 @@
 # Slack_clone_study
 ```
-
+Zerocho 슬랙 클론코딩 공부
 ```
-
 
 ## 폴더 구조
 ```
