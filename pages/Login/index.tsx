@@ -24,8 +24,8 @@ const Login = () => {
             email,
             password,
           })
-          .then(() => {
-            mutate();
+          .then((response) => {
+            mutate(response.data, false);
           })
           .catch((error) => {
             setLogInError(true);
