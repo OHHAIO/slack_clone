@@ -4,7 +4,7 @@ import loadable from "@loadable/component";
 
 const LogIn = loadable(() => import("@pages/Login"));
 const SignUp = loadable(() => import("@pages/SignUp"));
-const Channel = loadable(() => import("@pages/Channel"));
+const Workspace = loadable(() => import("@layouts/Workspace"));
 
 const App: FC = () => {
   return (
@@ -12,8 +12,7 @@ const App: FC = () => {
       <Route path="/" element={<Navigate replace to={"/login"} />} />
       <Route path="/login" element={<LogIn />} />
       <Route path="/signUp" element={<SignUp />} />
-      <Route path="/workspace/channel" element={<Channel />} />
-      <Route path="*" element={<LogIn />} />
+      <Route path="/workspace/*" element={<Workspace />} />
     </Routes>
   );
 };
