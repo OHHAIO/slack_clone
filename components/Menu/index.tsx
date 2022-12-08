@@ -3,7 +3,7 @@ import { CloseModalButton, CreateMenu } from "@components/Menu/styles";
 import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 
 interface Props {
-  children: ReactJSXElement[];
+  children?: ReactJSXElement | ReactJSXElement[];
   show: boolean;
   onCloseModal: (e: any) => void;
   style: CSSProperties;
@@ -14,6 +14,8 @@ const Menu: FC<Props> = ({ children, style, show, onCloseModal, closeButton }) =
   const stopPropagation = useCallback((e: any) => {
     e.stopPropagation();
   }, []);
+
+  if (!show) return null;
 
   return (
     <CreateMenu onClick={onCloseModal}>
